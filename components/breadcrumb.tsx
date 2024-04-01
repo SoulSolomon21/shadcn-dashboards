@@ -24,8 +24,8 @@ function BreadcrumbComponent() {
                         let itemLink = link[0].toUpperCase() + link.slice(1, link.length)
 
                         return (
-                            <>
-                                <BreadcrumbItem key={index}>
+                            <div className="inline-flex items-center gap-1.5" key={index}>
+                                <BreadcrumbItem>
                                     {paths === href ? (
                                         <BreadcrumbPage>
                                             {itemLink}
@@ -37,7 +37,7 @@ function BreadcrumbComponent() {
                                     )}
                                 </BreadcrumbItem>
                                 {pathNames.length !== index + 1 && <BreadcrumbSeparator/>}
-                            </>
+                            </div>
                         )
                     })
                 }
